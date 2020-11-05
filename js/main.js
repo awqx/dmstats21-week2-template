@@ -3,16 +3,17 @@
 // Step 1: Select the body of the HTML document and append an h2 element
 // with the text "We're learning D3!"
 
+d3.select("body").append("h2").text("We're Learning D3!");
 
 
 // Step 2: Select the body again and append a div with the id dynamic-content
 
-
+d3.select("body").append("div").attr("id", "dynamic-content");
 
 // Step 3: Select the div you just created (using its id!) and append a
 // paragraph with some text of your choice (you can also style this if you want!)
 
-
+d3.select("#dynamic-content").append("p").text("This is a paragraph.");
 
 // PART II: Binding data
 
@@ -55,8 +56,6 @@ var europeanUnion = ["Austria", "Belgium", "Bulgaria", "Croatia",
     "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia", "Lithuania",
     "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania",
     "Slovakia", "Slovenia", "Spain", "Sweden", "United Kingdom"];
-
-
 
 // Step 3: Append a new paragraph to your HTML document that shows the
 // number of EU countries
