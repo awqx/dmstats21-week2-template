@@ -1,0 +1,9 @@
+.city-label {
+    text-anchor: middle;
+    size: 11px
+}
+
+.city {
+    fill: goldenrod;
+    opacity: 0.8;
+}
