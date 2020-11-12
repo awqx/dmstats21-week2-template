@@ -126,8 +126,14 @@ var eu = d3.select("body")
 
 
 d3.csv("data/cities.csv", toInt, function(data) {
+
+    var euCountries = data.filter(function(row) {
+        return row.eu;
+    });
+    console.log(euCountries);
+
     var cities = eu.selectAll("circle")
-        .data(data)
+        .data(euCountries)
         .enter()
         .append("circle");
 
@@ -143,7 +149,7 @@ d3.csv("data/cities.csv", toInt, function(data) {
         .attr("class", "city");
 
     var labels = eu.selectAll("text")
-        .data(data)
+        .data(euCountries)
         .enter()
         .append("text");
 
